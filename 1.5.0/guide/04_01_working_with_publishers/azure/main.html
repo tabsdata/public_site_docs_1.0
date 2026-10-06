@@ -52,7 +52,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'guide/04_01_working_with_publishers/azure/main';</script>
     <script>
         DOCUMENTATION_OPTIONS.theme_version = '0.16.1';
-        DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://docs.tabsdata.com/version.json';
+        DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://v1.docs.tabsdata.com/version.json';
         DOCUMENTATION_OPTIONS.theme_switcher_version_match = '1.5.0';
         DOCUMENTATION_OPTIONS.show_version_warning_banner =
             false;
@@ -463,7 +463,7 @@
 
 <span class="n">azure_credentials</span> <span class="o">=</span> <span class="n">td</span><span class="o">.</span><span class="n">AzureAccountKeyCredentials</span><span class="p">(</span>
     <span class="c1"># HashiCorp is a type of secret store, ideal for production use cases.</span>
-    <span class="c1"># For rapid testing, you can refer to the credential values directly. You can also use environment variables as detailed here: https://docs.tabsdata.com/latest/guide/secrets_management/env_variables/main.html.</span>
+    <span class="c1"># For rapid testing, you can refer to the credential values directly. You can also use environment variables as detailed here: https://v1.docs.tabsdata.com/latest/guide/secrets_management/env_variables/main.html.</span>
     <span class="n">account_name</span><span class="o">=</span><span class="n">td</span><span class="o">.</span><span class="n">HashiCorpSecret</span><span class="p">(</span><span class="s2">&quot;path-to-secret&quot;</span><span class="p">,</span><span class="s2">&quot;AZURE_ACCOUNT_NAME&quot;</span><span class="p">),</span>
     <span class="n">account_key</span><span class="o">=</span><span class="n">td</span><span class="o">.</span><span class="n">HashiCorpSecret</span><span class="p">(</span><span class="s2">&quot;path-to-secret&quot;</span><span class="p">,</span><span class="s2">&quot;AZURE_ACCOUNT_KEY&quot;</span><span class="p">),</span>
 <span class="p">)</span>
@@ -497,7 +497,7 @@
 
 <span class="n">azure_credentials</span> <span class="o">=</span> <span class="n">td</span><span class="o">.</span><span class="n">AzureAccountKeyCredentials</span><span class="p">(</span>
     <span class="c1"># HashiCorp is a type of secret store, ideal for production use cases.</span>
-    <span class="c1"># For rapid testing, you can refer to the credential values directly. You can also use environment variables as detailed here: https://docs.tabsdata.com/latest/guide/secrets_management/env_variables/main.html.</span>
+    <span class="c1"># For rapid testing, you can refer to the credential values directly. You can also use environment variables as detailed here: https://v1.docs.tabsdata.com/latest/guide/secrets_management/env_variables/main.html.</span>
     <span class="n">account_name</span><span class="o">=</span><span class="n">td</span><span class="o">.</span><span class="n">HashiCorpSecret</span><span class="p">(</span><span class="s2">&quot;path-to-secret&quot;</span><span class="p">,</span><span class="s2">&quot;AZURE_ACCOUNT_NAME&quot;</span><span class="p">),</span>
     <span class="n">account_key</span><span class="o">=</span><span class="n">td</span><span class="o">.</span><span class="n">HashiCorpSecret</span><span class="p">(</span><span class="s2">&quot;path-to-secret&quot;</span><span class="p">,</span><span class="s2">&quot;AZURE_ACCOUNT_KEY&quot;</span><span class="p">),</span>
 <span class="p">)</span>

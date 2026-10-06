@@ -52,7 +52,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'guide/04_01_working_with_publishers/postgres/main';</script>
     <script>
         DOCUMENTATION_OPTIONS.theme_version = '0.16.1';
-        DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://docs.tabsdata.com/version.json';
+        DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://v1.docs.tabsdata.com/version.json';
         DOCUMENTATION_OPTIONS.theme_switcher_version_match = '1.8.0';
         DOCUMENTATION_OPTIONS.show_version_warning_banner =
             false;
@@ -480,7 +480,7 @@
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">tabsdata</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">td</span>
 
 <span class="c1"># HashiCorp is a type of secret store, ideal for production use cases.</span>
-<span class="c1"># For rapid testing, you can assign the credential values directly. You can also use environment variables as detailed here: https://docs.tabsdata.com/latest/guide/secrets_management/env_variables/main.html.</span>
+<span class="c1"># For rapid testing, you can assign the credential values directly. You can also use environment variables as detailed here: https://v1.docs.tabsdata.com/latest/guide/secrets_management/env_variables/main.html.</span>
 <span class="n">db_username</span> <span class="o">=</span> <span class="n">td</span><span class="o">.</span><span class="n">HashiCorpSecret</span><span class="p">(</span><span class="s2">&quot;path-to-secret&quot;</span><span class="p">,</span> <span class="s2">&quot;DB_USERNAME&quot;</span><span class="p">)</span>
 <span class="n">db_password</span> <span class="o">=</span> <span class="n">td</span><span class="o">.</span><span class="n">HashiCorpSecret</span><span class="p">(</span><span class="s2">&quot;path-to-secret&quot;</span><span class="p">,</span> <span class="s2">&quot;DB_PASSWORD&quot;</span><span class="p">)</span>
 

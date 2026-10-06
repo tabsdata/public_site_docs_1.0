@@ -52,7 +52,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'guide/06_working_with_tables/table_frame';</script>
     <script>
         DOCUMENTATION_OPTIONS.theme_version = '0.16.1';
-        DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://docs.tabsdata.com/version.json';
+        DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://v1.docs.tabsdata.com/version.json';
         DOCUMENTATION_OPTIONS.theme_switcher_version_match = '1.7.1';
         DOCUMENTATION_OPTIONS.show_version_warning_banner =
             false;
@@ -490,7 +490,7 @@
 </section>
 <section id="table-operations">
 <h2>Table Operations</h2>
-<p>Table operations are covered in detail in the <a class="reference external" href="https://docs.tabsdata.com/latest/ref/api/bycat-index.html">API Reference documentation</a>.</p>
+<p>Table operations are covered in detail in the <a class="reference external" href="https://v1.docs.tabsdata.com/latest/ref/api/bycat-index.html">API Reference documentation</a>.</p>
 <p>Some of the key table operations are demonstrated in this section using the following <code class="docutils literal notranslate"><span class="pre">persons</span></code> Tabsdata table:</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>┌────────────┬────────────┬────────────┬─────────────┬────────────┬────────┐
 │ identifier ┆ first_name ┆ last_name  ┆ nationality ┆ birthdate  ┆ height │
@@ -712,7 +712,7 @@
 <hr class="docutils" />
 <section id="filter">
 <h3>Filter</h3>
-<p>Full list of Filters supported can be found in the <a class="reference external" href="https://docs.tabsdata.com/latest/ref/api/bycat-filters.html">API Reference</a>.</p>
+<p>Full list of Filters supported can be found in the <a class="reference external" href="https://v1.docs.tabsdata.com/latest/ref/api/bycat-filters.html">API Reference</a>.</p>
 <section id="simple-condition-on-column-value">
 <h4>Simple condition on column value</h4>
 <p>Here is an example code to filter the values of the <code class="docutils literal notranslate"><span class="pre">last_name</span></code> column by the first letter as “A”.</p>
@@ -786,7 +786,7 @@
 <hr class="docutils" />
 <section id="aggregation">
 <h3>Aggregation</h3>
-<p>Full list of Aggregations supported can be found in the <a class="reference external" href="https://docs.tabsdata.com/latest/ref/api/bycat-aggregation.html">API Reference</a>.</p>
+<p>Full list of Aggregations supported can be found in the <a class="reference external" href="https://v1.docs.tabsdata.com/latest/ref/api/bycat-aggregation.html">API Reference</a>.</p>
 <p>Here is an example code to group by the birth year and count the number of people born each year. It first converts the <code class="docutils literal notranslate"><span class="pre">birthdate</span></code> column to a Date type, extracts the year, and names it <code class="docutils literal notranslate"><span class="pre">birth_year</span></code>. Then, it groups the data by <code class="docutils literal notranslate"><span class="pre">birth_year</span></code> and counts the occurrences of <code class="docutils literal notranslate"><span class="pre">first_name</span></code>, storing the result in the <code class="docutils literal notranslate"><span class="pre">people_born</span></code> column.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">tf</span><span class="o">.</span><span class="n">group_by</span><span class="p">(</span><span class="n">td</span><span class="o">.</span><span class="n">col</span><span class="p">(</span><span class="s2">&quot;birthdate&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">cast</span><span class="p">(</span><span class="n">td</span><span class="o">.</span><span class="n">Date</span><span class="p">)</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">year</span><span class="p">()</span><span class="o">.</span><span class="n">alias</span><span class="p">(</span><span class="s2">&quot;birth_year&quot;</span><span class="p">))</span><span class="o">.</span><span class="n">agg</span><span class="p">(</span><span class="n">td</span><span class="o">.</span><span class="n">col</span><span class="p">(</span><span class="s2">&quot;first_name&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">count</span><span class="p">()</span><span class="o">.</span><span class="n">alias</span><span class="p">(</span><span class="s2">&quot;people_born&quot;</span><span class="p">))</span>
 </pre></div>
